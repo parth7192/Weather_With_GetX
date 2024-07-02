@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:weather_with_getx/pages/homepage/home_page.dart';
 import 'package:weather_with_getx/pages/intropage/intro_page.dart';
+import 'package:weather_with_getx/pages/searchpage/search_page.dart';
 import 'package:weather_with_getx/pages/splashscreen/splash_screen.dart';
 
 class MyApp extends StatelessWidget {
@@ -14,17 +15,22 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(
           name: "/",
-          page: () => const SplashScreen(),
+          page: () => const SplashScreen(
+
+          ),
         ),
         GetPage(
-          name: "intro_page",
+          name: "/intro_page",
           page: () => const IntroPage(),
         ),
         GetPage(
           name: "/home_page",
           page: () => const HomePage(),
         ),
-
+        GetPage(
+          name: "/search_page",
+          page: () => const SearchPage(),
+        ),
       ],
     );
   }
